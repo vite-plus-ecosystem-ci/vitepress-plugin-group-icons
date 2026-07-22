@@ -9,3 +9,13 @@ onlyBuiltDependencies:
   - esbuild
   - rolldown
   - simple-git-hooks
+catalog:
+  vite: npm:@voidzero-dev/vite-plus-core@0.0.0-commit.9855245a469b178066c25a5d45c971c130565d89
+  vite-plus: 0.0.0-commit.9855245a469b178066c25a5d45c971c130565d89
+overrides:
+  vite: 'catalog:'
+peerDependencyRules:
+  allowAny:
+    - vite
+  allowedVersions:
+    vite: '*'
