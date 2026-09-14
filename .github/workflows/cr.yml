@@ -32,3 +32,5 @@ jobs:
         run: nr build
 
       - run: nlx pkg-pr-new publish
+        if: ${{ github.repository_owner != 'vite-plus-ecosystem-ci' }}
+        name: Publish preview package

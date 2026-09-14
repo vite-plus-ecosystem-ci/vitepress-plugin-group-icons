@@ -20,8 +20,6 @@ export default defineConfig({
     endOfLine: 'lf',
   },
   pack: {
-    deps: {
-      neverBundle: ['markdown-it'],
-    },
+    deps: { resolveDepSubpath: true, neverBundle: ['markdown-it'] },
   },
 })

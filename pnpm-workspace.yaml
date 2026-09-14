@@ -7,6 +7,29 @@ packages:
 
 minimumReleaseAgeExclude:
   - bumpp@12.1.1
+  - '@voidzero-dev/vite-plus-core@0.0.0-commit.6b5bbcaf494b963b67950e77a7673de21ba9c6d5'
+  - '@voidzero-dev/vite-plus-darwin-arm64@0.0.0-commit.6b5bbcaf494b963b67950e77a7673de21ba9c6d5'
+  - '@voidzero-dev/vite-plus-darwin-x64@0.0.0-commit.6b5bbcaf494b963b67950e77a7673de21ba9c6d5'
+  - '@voidzero-dev/vite-plus-linux-arm64-gnu@0.0.0-commit.6b5bbcaf494b963b67950e77a7673de21ba9c6d5'
+  - '@voidzero-dev/vite-plus-linux-arm64-musl@0.0.0-commit.6b5bbcaf494b963b67950e77a7673de21ba9c6d5'
+  - '@voidzero-dev/vite-plus-linux-x64-gnu@0.0.0-commit.6b5bbcaf494b963b67950e77a7673de21ba9c6d5'
+  - '@voidzero-dev/vite-plus-linux-x64-musl@0.0.0-commit.6b5bbcaf494b963b67950e77a7673de21ba9c6d5'
+  - '@voidzero-dev/vite-plus-win32-arm64-msvc@0.0.0-commit.6b5bbcaf494b963b67950e77a7673de21ba9c6d5'
+  - '@voidzero-dev/vite-plus-win32-x64-msvc@0.0.0-commit.6b5bbcaf494b963b67950e77a7673de21ba9c6d5'
+  - vite-plus@0.0.0-commit.6b5bbcaf494b963b67950e77a7673de21ba9c6d5
 
 allowBuilds:
   esbuild: true
+trustPolicyExclude:
+  - vite-plus
+  - '@voidzero-dev/*'
+catalog:
+  vite: npm:@voidzero-dev/vite-plus-core@0.0.0-commit.6b5bbcaf494b963b67950e77a7673de21ba9c6d5
+  vite-plus: 0.0.0-commit.6b5bbcaf494b963b67950e77a7673de21ba9c6d5
+overrides:
+  vite@*: 'catalog:'
+peerDependencyRules:
+  allowAny:
+    - vite
+  allowedVersions:
+    vite: '*'
