@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite-plus'
 
 export default defineConfig({
+  test: { clearMocks: false },
   staged: {
     '*.ts': 'vp lint --fix',
     '*.{ts,json}': 'vp fmt',
@@ -20,8 +21,6 @@ export default defineConfig({
     endOfLine: 'lf',
   },
   pack: {
-    deps: {
-      neverBundle: ['markdown-it'],
-    },
+    deps: { resolveDepSubpath: true, neverBundle: ['markdown-it'] },
   },
 })
