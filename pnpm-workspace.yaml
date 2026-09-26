@@ -6,7 +6,14 @@ packages:
   - docs
 
 minimumReleaseAgeExclude:
+  # ecosystem-ci smoke test: preview builds carry no provenance and are brand new
+  - vite-plus
+  - '@voidzero-dev/*'
   - bumpp@12.1.1
 
 allowBuilds:
   esbuild: true
+trustPolicyExclude:
+  # ecosystem-ci smoke test: preview builds carry no provenance and are brand new
+  - vite-plus
+  - '@voidzero-dev/*'
