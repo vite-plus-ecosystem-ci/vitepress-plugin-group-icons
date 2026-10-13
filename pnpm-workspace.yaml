@@ -17,3 +17,13 @@ trustPolicyExclude:
   # ecosystem-ci smoke test: preview builds carry no provenance and are brand new
   - vite-plus
   - '@voidzero-dev/*'
+catalog:
+  vite: npm:@voidzero-dev/vite-plus-core@0.0.0-commit.824e84de80cbc1af30829ed024a4158d416dbad3
+  vite-plus: 0.0.0-commit.824e84de80cbc1af30829ed024a4158d416dbad3
+overrides:
+  vite@*: 'catalog:'
+peerDependencyRules:
+  allowAny:
+    - vite
+  allowedVersions:
+    vite: '*'
